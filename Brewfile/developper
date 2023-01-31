@@ -12,4 +12,6 @@ brew "rbenv"
 brew "tree"
 
 #cask "gitkraken"
+cask "jetbrains-toolbox"
+cask "postman"
 #cask "visual-studio-code"
