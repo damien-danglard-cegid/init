@@ -1,0 +1,63 @@
+if [ $UID -ne 0 ]; then
+	# reboot / halt / poweroff
+	alias reboot='sudo /sbin/reboot'
+	alias poweroff='sudo /sbin/poweroff'
+	alias halt='sudo /sbin/halt'
+	alias shutdown='sudo /sbin/shutdown'
+fi
+
+alias ll="ls -l"
+alias la="ls -la"
+alias lk="k --human --group-directories-first --almost-all"
+alias c='clear'
+#alias ls='ls --color=auto'
+alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'' | less'
+
+
+## a quick way to get out of current directory ##
+alias ..='cd ..'
+alias ...='cd ../../../'
+alias ....='cd ../../../../'
+alias .....='cd ../../../../'
+alias .4='cd ../../../../'
+alias .5='cd ../../../../..'
+
+## Colorize the grep command output for ease of use (good for log files)##
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
+
+alias path='echo -e ${PATH//:/\\n}'
+alias now='date +"%T"'
+alias nowtime=now
+alias nowdate='date +"%d-%m-%Y"'
+
+#alias vi=vim
+#alias svi='sudo vi'
+#alias vis='vim "+set si"'
+#alias edit='vim'
+
+# do not delete / or prompt if deleting more than 3 files at a time #
+#alias rm='rm -I --preserve-root'
+
+# confirmation #
+#alias rm='rm -i'
+#alias mv='mv -i'
+#alias cp='cp -i'
+#alias ln='ln -i'
+ 
+# Parenting changing perms on / #
+#alias chown='chown --preserve-root'
+#alias chmod='chmod --preserve-root'
+#alias chgrp='chgrp --preserve-root'
+
+alias xcw='open *.xcworkspace'
+alias xcp='open *.xcodeproj'
+
+alias add-routes='~/AddRoutes2.sh'
+alias clear-routes='~/DeleteRoutes.sh'
+
+CP() {
+    mkdir -p $(dirname "$2") && cp -r "$1" "$2"
+}
+
