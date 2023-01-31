@@ -11,23 +11,23 @@
 ### Desktop
 
 ```sh
-curl ...
-brew bundle install --file=desktop
-rm desktop
+curl -fsSL https://github.com/damien-danglard-cegid/init/raw/main/Brewfile/desktop > Brewfile
+brew bundle install
+rm Brewfile
 ```
 
 ### Developper
 
 ```sh
-curl ...
-brew bundle install --file=developper
-rm developper
+curl -fsSL https://github.com/damien-danglard-cegid/init/raw/main/Brewfile/developper > Brewfile
+brew bundle install
+rm Brewfile
 ```
 
 ### Developper iOS
 
 ```sh
-curl ...
-brew bundle install --file=developper-ios
-rm developper-ios
+curl -fsSL https://github.com/damien-danglard-cegid/init/raw/main/Brewfile/developper-ios > Brewfile
+brew bundle install
+rm Brewfile
 ```
