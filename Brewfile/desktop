@@ -1,5 +1,8 @@
+tap "homebrew/cask"
 tap "mas-cli/tap"
 brew "mas"
+
+cask "microsoft-teams"
 
 mas "Microsoft Outlook", id: 985367838
 mas "OneDrive", id: 823766827
