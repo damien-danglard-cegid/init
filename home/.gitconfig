@@ -1,0 +1,64 @@
+[user]
+	name = Damien DANGLARD
+	email = ddanglard@cegid.com
+[alias]
+	lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %s %C(dim)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+	lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %s %C(dim)- %an%C(reset)' --all
+	lg3 = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	lgb = log --simplify-by-decoration --graph --oneline --all
+	lg = !"git lg1"
+	alias = ! "git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ / | while read alias; do name=\"${alias%% =*}\"; echo \"\\033[1m$name\\033[0m ${alias#$name }\"; done"
+	adog = log --all --decorate --oneline --graph
+	taglog = log --tags --simplify-by-decoration --pretty='format:%ci %d'
+	prune-merged = ! git branch --merged | egrep -v \"(^\\*|develop|stable)\" | xargs git branch -d
+	prune-squash-merged = ! "git checkout -q main && git for-each-ref refs/heads/ '--format=%(refname:short)' | grep -v 'develop' | grep -v 'main' | while read branch; do mergeBase=$(git merge-base main $branch); [[ $(git cherry main $(git commit-tree $(git rev-parse $branch^{tree}) -p $mergeBase -m _)) == '-'* ]] && git branch -D $branch; done"
+	prune-squash-merged-dry = ! "git checkout -q main && git for-each-ref refs/heads/ '--format=%(refname:short)' | grep -v 'develop' | grep -v 'main' | while read branch; do mergeBase=$(git merge-base main $branch); [[ $(git cherry main $(git commit-tree $(git rev-parse $branch^{tree}) -p $mergeBase -m _)) == '-'* ]] && echo \"$branch is merged into main and can be deleted\"; done"
+	prune-features = ! "for key in `git config --local --name-only --get-regexp ^gitflow\\.branch\\.feature`; do git config --local --unset $key; echo \"$key supprimé\"; done"
+	prune-bugfixes = ! "for key in `git config --local --name-only --get-regexp ^gitflow\\.branch\\.bugfix`; do git config --local --unset $key; echo \"$key supprimé\"; done"
+	root = rev-parse --show-toplevel
+[diff]
+	submodule = log
+	wsErrorHighlight = all
+[status]
+	submodulesummary = 1
+[pull]
+	rebase = true
+[pager]
+	branch = false
+	tag = false
+	stash = false
+[core]
+	autocrlf = input
+	excludesfile = /Users/danglard/.gitignore_global
+[credential]
+	helper = cache
+[gitflow "bugfix.finish"]
+	keepremote = true
+	push = false
+[gitflow "feature.finish"]
+	keepremote = true
+	push = false
+[gitflow "hotfix.finish"]
+	keepremote = true
+	push = false
+[fetch]
+	prune = true
+[init]
+	defaultBranch = main
+[gitflow "path"]
+	hooks = /Users/danglard/.git-flow-hooks
+[branch]
+	autosetuprebase = always
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/danglard/.stCommitMsg
