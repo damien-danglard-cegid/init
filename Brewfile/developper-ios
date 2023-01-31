@@ -6,3 +6,6 @@ brew "xcodegen"
 
 #cask "devtoys"
 #cask "flutter"
+#cask "swiftformat-for-xcode"
+
+mas "Xcode", id: 497799835
