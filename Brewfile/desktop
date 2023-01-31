@@ -2,8 +2,15 @@ tap "homebrew/cask"
 tap "mas-cli/tap"
 brew "mas"
 
+cask "appcleaner"
+cask "google-chrome"
 cask "microsoft-teams"
 
-mas "Microsoft Outlook", id: 985367838
-mas "OneDrive", id: 823766827
-mas "Toggl Track", id: 957734279
+mas "microsoft-excel", id: 462058435
+mas "microsoft-onedrive", id: 823766827
+mas "microsoft-onenote", id: 784801555
+mas "microsoft-outlook", id: 985367838
+mas "microsoft-powerpoint", id: 462062816
+mas "microsoft-remote-desktop", id: 1295203466
+mas "microsoft-word", id: 462054704
+mas "toggl-track", id: 957734279
