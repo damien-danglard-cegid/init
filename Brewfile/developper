@@ -9,3 +9,6 @@ brew "tree"
 #brew "maven"
 #brew "mint"
 #brew "node"
+
+#cask "gitkraken"
+#cask "visual-studio-code"
