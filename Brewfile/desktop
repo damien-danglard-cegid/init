@@ -1,4 +1,4 @@
-
+tap "mas-cli/tap"
 
 mas "Microsoft Outlook", id: 985367838
 mas "OneDrive", id: 823766827
