@@ -31,3 +31,9 @@ curl -fsSL https://github.com/damien-danglard-cegid/init/raw/main/Brewfile/devel
 brew bundle install
 rm Brewfile
 ```
+
+## Customize zsh
+
+```sh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
