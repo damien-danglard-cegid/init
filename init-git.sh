@@ -1,5 +1,4 @@
 ROOT=~/Projects
-
 mkdir $ROOT
 
 git clone https://cegid@dev.azure.com/cegid/leportail.cegid.com/_git/CegidFlow $ROOT/cegid-flow
@@ -10,7 +9,7 @@ cd $XRPU
 git clone https://cegid@dev.azure.com/cegid/XRP%20Ultimate/_git/mob-android
 git clone https://cegid@dev.azure.com/cegid/XRP%20Ultimate/_git/mob-deep-links
 git clone https://cegid@dev.azure.com/cegid/XRP%20Ultimate/_git/mob-i18n
-git clone https://cegid@dev.azure.com/cegid/XRP%20Ultimate/_git/mob-ios
+git lfs clone https://cegid@dev.azure.com/cegid/XRP%20Ultimate/_git/mob-ios
 git clone https://cegid@dev.azure.com/cegid/XRP%20Ultimate/_git/mob-ios-tools
 git clone https://cegid@dev.azure.com/cegid/XRP%20Ultimate/_git/wiki-mob
 
