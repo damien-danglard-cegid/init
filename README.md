@@ -39,3 +39,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 brew install romkatv/powerlevel10k/powerlevel10k
 p10k configure
 ```
+
+## Clone GIT Reposotories
+
+```sh
+/bin/bash -c "$(curl -fsSL https://github.com/damien-danglard-cegid/init/raw/main/init-git.sh)"
+```
