@@ -13,5 +13,6 @@ brew "xcodegen"
 #cask "flutter"
 #cask "periphery"
 #cask "swiftformat-for-xcode"
+#cask "tuist"
 
 mas "Xcode", id: 497799835
