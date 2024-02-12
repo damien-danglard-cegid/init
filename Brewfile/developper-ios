@@ -7,10 +7,9 @@ brew "mas"
 brew "swiftformat"
 brew "swiftgen"
 brew "swiftlint"
-brew "xclogparser"
+#brew "xclogparser"
 brew "xcodegen"
 
-#cask "devtoys"
 #cask "flutter"
 #cask "swiftformat-for-xcode"
 
