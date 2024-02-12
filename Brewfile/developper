@@ -11,6 +11,7 @@ brew "pre-commit"
 brew "rbenv"
 brew "tree"
 
+cask "devtoys"
 #cask "gitkraken"
 cask "jetbrains-toolbox"
 cask "postman"
