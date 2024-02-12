@@ -3,8 +3,15 @@ tap "mas-cli/tap"
 brew "mas"
 
 cask "appcleaner"
-cask "google-chrome"
+cask "arc"
+cask "ccleaner"
+cask "displaylink"
+cask "hiddenbar"
+#cask "google-chrome"
+cask "microsoft-auto-update"
 cask "microsoft-teams"
+cask "obsidian"
+cask "yubico-authenticator"
 
 mas "microsoft-excel", id: 462058435
 mas "microsoft-onedrive", id: 823766827
