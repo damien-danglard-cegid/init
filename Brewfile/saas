@@ -1,1 +1,3 @@
+tap "homebrew/cask"
+
 cask "microsoft-azure-storage-explorer"
