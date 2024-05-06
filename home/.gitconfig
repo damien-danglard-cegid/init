@@ -32,6 +32,8 @@
 	excludesfile = /Users/danglard/.gitignore_global
 [credential]
 	helper = cache
+	helper = 
+	helper = /usr/local/share/gcm-core/git-credential-manager
 [gitflow "bugfix.finish"]
 	keepremote = true
 	push = false
@@ -62,3 +64,7 @@
 	trustExitCode = true
 [commit]
 	template = /Users/danglard/.stCommitMsg
+[credential "azrepos:org/cegid"]
+	username = ddanglard@cegid.com
+[credential "https://dev.azure.com"]
+	useHttpPath = true
